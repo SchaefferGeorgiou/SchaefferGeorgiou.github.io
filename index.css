@@ -1,0 +1,48 @@
+@import url("fonts/Roboto.css");
+
+
+body{
+    font-family: "Roboto";
+    background-color:black;
+    color:white;
+    text-align:center;
+  }
+
+  p, h2, h3{
+    font-family: "Roboto Thin";
+    padding: 10px;
+  }
+
+  h4{
+    font-family: "Roboto Thin";
+    font-style: italic;
+  }
+
+  .header {
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  }
+
+  .div-red{
+    text-align: center;
+    background: #ff1111;
+    color: white;
+    width: 50%;
+  }
+
+  .div-blue{
+    text-align: center;
+    background: #3f4eff;
+    color: white;
+    width: 50%;
+  }
+
+  .div-black{
+    text-align: center;
+    background: black;
+    color: white;
+    width: 50%;
+  }
