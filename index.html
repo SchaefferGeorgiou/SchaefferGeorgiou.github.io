@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en">
 <head>
+  <meta name="keywords" content="Projects, Portfolio, Game Developer, Games">
+  <meta name="description" content="Game Portfolio">
+  <meta name="author" content="Schaeffer Georgiou" >
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   
   <link rel="stylesheet" href="index.css">
@@ -15,13 +21,13 @@
     
 </head>
   <body>
-    <section class="header">
+    <header class="header">
 
       <h1>SCHAEFFER GEORGIOU</h1>
       <h3 style="font-family: Roboto Thin;">Game Developer | Music Producer | Artist</h3>
       <h4 style="font-family: Roboto Thin; font-style: italic;">Gameplay & Audio Programmer | SFX, Composition & Production | Stylised Digital Art & 3D Modelling</h4>
       
-    </section>
+    </header>
     <br>
     <section class="header">
       
@@ -68,6 +74,48 @@
 
     </section>
 
-  
+    <footer>
+
+      <h2>Contact Me</h2>
+
+      <form action="https://formsubmit.co/schaeffergeorgiou@email.com" method="POST">
+        
+        <div class="div-black" style="float: left; margin:auto; height: 260px;">       
+          <label for="fname">First Name:</label>
+          <br>
+          <input type="text" id="fname" name = "firstname" style="background-color: white; color: black;" required>
+          <br>
+          <label for="lname">Last Name:</label>
+          <br>
+          <input type="text" id="lname" name = "lastname" style="background-color: white; color: black;" required>        
+          <br>
+          <label for="email-addr">E-mail Address:</label>
+          <br>
+          <input type="email" id="email-addr" name="email-address" style="background-color: white; color: black;" required>
+        </div>
+
+        <div class="div-black" style="float: right; margin:auto; height: 260px;">
+          
+          <label for="email-subj">Subject:</label>
+          <br>
+          <input type="text" id="email-subj" name = "_subject" style="background-color: white; color: black;" required>
+          <br>
+          <label for="msg">Message:</label>
+          <br>
+          <textarea id="msg", name="message" required></textarea>
+
+        </div>
+
+
+    
+        
+        
+        
+        <button type="submit" value="Send">
+
+      </form>
+
+
+    </footer>
   </body>
 </html>
