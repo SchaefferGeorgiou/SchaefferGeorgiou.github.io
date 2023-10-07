@@ -74,48 +74,43 @@
 
     </section>
 
-    <footer>
-
+    <section style="margin:auto; min-height: fit-content;">
+      <br >
       <h2>Contact Me</h2>
 
       <form action="https://formsubmit.co/schaeffergeorgiou@email.com" method="POST">
         
         <div class="div-black" style="float: left; margin:auto; height: 260px;">       
-          <label for="fname">First Name:</label>
-          <br>
-          <input type="text" id="fname" name = "firstname" style="background-color: white; color: black;" required>
-          <br>
-          <label for="lname">Last Name:</label>
-          <br>
-          <input type="text" id="lname" name = "lastname" style="background-color: white; color: black;" required>        
-          <br>
-          <label for="email-addr">E-mail Address:</label>
-          <br>
-          <input type="email" id="email-addr" name="email-address" style="background-color: white; color: black;" required>
+          <label for="fname" style="padding: 5px">First Name:</label>
+          <br><br>
+          <input class="user-input" type="text" id="fname" name = "first-name" required>
+          <br><br>
+          <label for="lname" style="padding: 5px">Last Name:</label>
+          <br><br>
+          <input class="user-input" type="text" id="lname" name = "last-name" required>        
+          <br><br>
+          <label for="email-addr" style="padding: 5px">E-mail Address:</label>
+          <br><br>
+          <input  class="user-input" type="email" id="email-addr" name="email-address"  required>
         </div>
 
         <div class="div-black" style="float: right; margin:auto; height: 260px;">
-          
-          <label for="email-subj">Subject:</label>
-          <br>
-          <input type="text" id="email-subj" name = "_subject" style="background-color: white; color: black;" required>
-          <br>
-          <label for="msg">Message:</label>
-          <br>
-          <textarea id="msg", name="message" required></textarea>
 
-        </div>
-
-
-    
-        
-        
-        
-        <button type="submit" value="Send">
+            <label for="email-subj" style="padding: 5px">Subject:</label>
+            <br><br>
+            <input class="user-input" type="text" id="email-subj" name="_subject" required>
+            <br><br>
+            <label for="msg" style="padding: 5px">Message:</label>
+            <br><br>
+            <textarea class="user-input" id="msg" , name="message" required></textarea>
+            <br><br>
+            <!--<input type="hidden" name="_next" value="/thankYou.html" > For a custom Thank you page -->
+            <button type="submit" value="Send" style="width: 70%; margin: 4px 2px; height: 30px; background: white; color:black"></button>
+        </div>   
 
       </form>
 
 
-    </footer>
+    </section>
   </body>
 </html>
