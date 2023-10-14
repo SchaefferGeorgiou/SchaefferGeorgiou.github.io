@@ -59,6 +59,22 @@ body{
     color: black;
 }
 
+.user-input-button {
+    text-align: center;
+    line-height: 1em;
+    padding: 15px;
+    background: white;
+    width: 50%;
+    border: none;
+    outline: none;
+    border-radius: 25px;    
+    color: black;
+}
+
     .user-input:focus {
         border: 2px solid #3f4eff;
     }
+
+.user-input-button:focus {
+    border: 2px solid #3f4eff;
+}
