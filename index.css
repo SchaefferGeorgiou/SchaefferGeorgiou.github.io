@@ -46,26 +46,12 @@ body{
     text-align: center;
     background: black;
     color: white;
-    width: 100%;
-    min-height: 520px;
+    width: 100%;   
+
+   
 }
 
-.div-image {
-    text-align: center;
-    background-size: 100% 100%;
-    color: white;
-    width: 100%;
-    height: auto;
-    max-height: 720px;
-    min-height: 520px;
-}
 
-.space-break {
-
-    height: 5%;
-    width: 100%;
-    background-color: black;
-}
 
 .user-input {
     text-align: left;
@@ -99,10 +85,9 @@ body{
     border: 2px solid #3f4eff;
 }
 
-.img-round {
-    border-radius: 20px;
-    margin-left: 0;
-    margin-right: 0;
+img {
+    
+    object-fit:cover;
     width: 100%;
     height: 100%;
 }
@@ -120,11 +105,12 @@ body{
         
     }
 
+
+
 .full-row {
+    grid-column-start: 1;
+    grid-column-end: 3;
 
-   grid-column-start: 1;
-
-   grid-column-end: 3;
 }
 
 .left-column{
@@ -141,4 +127,23 @@ body{
 
     grid-column-end: 3;
 
+}
+
+a {
+    color: white;
+    transition: color 1s;
+}
+
+a:link {
+
+    color:inherit;
+
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: black;
 }
