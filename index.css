@@ -8,7 +8,7 @@ body {
 
 }
 
-  p, h2, h3{
+  p, h3{
     font-family: "Roboto";
     padding: 10px;
     color:white;
@@ -140,13 +140,14 @@ img {
 }
 
 a {
-    color: white;
-    transition: color 1s;
+    color: inherit;
+    transition: color 0.5s;
 }
 
 a:link {
 
     color:inherit;
+    text-decoration:none;
 
 }
 
@@ -155,6 +156,6 @@ a:visited {
 }
 
 a:hover {
-    color: black;
+    color: grey;
 }
 
