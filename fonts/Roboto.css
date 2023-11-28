@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url("Roboto/Roboto-Regular.ttf"), format("ttf");
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url("Roboto/Roboto-Italic.ttf"), format("ttf");
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url("Roboto/Roboto-Bold.ttf"), format("ttf");
+    font-style: bold;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url("Roboto/Roboto-BoldItalic.ttf"), format("ttf");
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Roboto Thin";
+    src: local("Roboto"), url("Roboto/Roboto-Thin.ttf"), format("ttf");
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Roboto Thin";
+    src: local("Roboto"), url("Roboto/Roboto-ThinItalic.ttf"), format("ttf");
+    font-style: italic;
+  }
+
