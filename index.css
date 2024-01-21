@@ -186,7 +186,7 @@ a:hover {
     color: grey;
 }
 
-@media-phone{
+@media (max-width:480px){
 
     .grid-container {
         display: grid;
