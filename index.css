@@ -10,7 +10,7 @@ body {
 
   p, h3{
     font-family: "Roboto";
-    padding: 10px;
+    
     color:white;
   }
 
@@ -32,18 +32,16 @@ body {
     background: #ff314a;
     color: white;
     width: 100%;
-    min-height: 520px;
+   
 
     
 }
 
 .div-blue {
     text-align: center;
-    background: #31b1ff;
+    background: #0097d3;
     color: white;
     width: 100%;
-    min-height: 520px;
-   
 }
 
 .div-black {
@@ -135,7 +133,7 @@ img {
 .spacer {
     
     
-    height: 100px;
+    height: 25px;
     width: 100%;
 }
 
