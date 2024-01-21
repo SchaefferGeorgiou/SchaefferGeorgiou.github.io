@@ -29,19 +29,19 @@ body {
 
 .div-red {
     text-align: center;
-    background: #ff314a;
+    background: #d30000;
     color: white;
     width: 100%;
-   
-
-    
+    min-height: fit-content;
+    max-height: 100%;
 }
 
 .div-blue {
     text-align: center;
     background: #0097d3;
     color: white;
-    width: 100%;
+    min-height: fit-content;
+    max-height: 100%;
 }
 
 .div-black {
@@ -49,7 +49,8 @@ body {
     background: black;
     color: white;
     width: 100%;
-    
+    min-height: fit-content;
+    max-height: 100%;
 }
 
 
@@ -88,7 +89,6 @@ body {
 
 img {
     
-    
     width: 100%;
     height: 100%;
 }
@@ -102,9 +102,38 @@ img {
 }
     .grid-container > div {
         
-
-        
+        min-height: 0;
+        display: inline-grid;
     }
+
+@media screen and (min-width: 400px){
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+        .grid-container > div {
+            min-height: 0;
+            display: inline-grid;
+        }
+
+    .full-row {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .left-column {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .right-column {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+}
 
 
 
@@ -157,3 +186,11 @@ a:hover {
     color: grey;
 }
 
+@media screen and (max-width: 420px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+}
