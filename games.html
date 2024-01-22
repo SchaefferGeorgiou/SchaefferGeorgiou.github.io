@@ -13,62 +13,64 @@
 
     <title>Schaeffer Georgiou: Games</title>
 
-    <!--style="color:#31b1ff;"
-        style="color:#314aff;"
-        style="color:#7f31ff;"
-        style="color:#e631ff;"
-        style="color:#ff31b1;"
-        style="color:#ff314a;"-->
 
 
 </head>
 <body>
 
-    <div class="grid-container">
+    <div class="grid-container" >
 
-        <div class="full-row div-black" style="padding-bottom: 5%; padding-top: 5%;">
+        <div class="full-row div-black" style="padding-bottom: 2vh; padding-top: 2vh;">
 
             <a href="index.html"><h1>G A M E S</h1></a>
-            <h3 style="font-family: Roboto Thin;">Games and Software Development</h3>
-            <h4 style="font-family: Roboto Thin; font-style: italic;">Any language with a 'C' | UnrealEngine | Unity | OpenGL</h4>
 
         </div>
 
-        <div class="left-column div-black" style="max-height: 520px;">
+        <div class="left-column div-black" style="min-height: 25vh; height: 600px; ">
 
             <img src="images/Audio Spikes v1.gif">
 
         </div>
 
-        <div class="right-column div-blue">
+        <div class="right-column div-blue" style="min-height: 25vh; height: 600px; ">
 
-            <h2>Audio Spikes</h2>
-            <h4>OpenGL | OpenALSoft | C / C++ | ImGui</h4>
+            <h2 style="margin-bottom: 0px;">Audio Spikes</h2>
+            <h3 style="margin-top: 0px; margin-bottom: 0px;">C++ | OpenGL | OpenALSoft | ImGui</h3>
 
-            <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
+            <p style="text-align: left; margin-left: 5%; margin-right: 5%; max-height: 100%; margin-top: 0px; margin-bottom: 0px;">
 
-                My foray into audio and visual programming! It was originally a project for my Immersive Game Technologies module where we needed to create an interactable piece of software using OpenGL.
+                An app where the user can rotate and edit a 3D object.
                 <br><br>
-                The idea was to have a 3D sphere whose surface would have vertices extruded depending on the wave file read in. Creating a visual representation of the audio data that could be rotated freely while the wave file played...
-                <br>
-                This was going to be achieved by using an <a href="https://github.com/libsndfile/libsndfile" target="_blank">external wave file reader</a>, <a href="https://www.songho.ca/opengl/gl_sphere.html" target="_blank"> <s>stolen</s> borrowed code to render a sphere </a>, <a href="https://github.com/kcat/openal-soft" target="_blank">OpenALSoft</a> to play a sound, and finally <a href="https://github.com/ocornut/imgui" target="_blank">ImGui</a> for the UI elements and interaction.
+                The concept is to have the surface of the sphere deform based on an imported wave file.
                 <br><br>
-                A bold decision, as someone who had no experience with binary file reading, minimal understanding of 3D rendering, and somehow less knowledge about audio playback...
-
-                <br><br>
-                So none of the audio aspect was done by hand-in, but I was able to have the sphere rotate and change the amount of vertices on the sphere. As that was the main thing required to prove I understood the principles at hand.
-
-                <br>
-                Main thing I'd do differently is not try to add an entire language to a project I wasn't going to be marked on.
-                BUT I am currently re-attempting the project! Trying to complete the original idea. I've recently finished my wave file reader, which has given me an understanding of binary file reading, file structures, and PCM data.
-                Code hell, but educational code hell.
+                External Libraries:
             </p>
+            
+            <ul style="text-align: left; margin-left: 5%; margin-right: 5%; margin-top:0px ;margin-bottom:0px;">
+
+                <li> <a href="https://github.com/libsndfile/libsndfile" target="_blank" style="text-decoration:underline">libsndfile</a> as a wave file reader, </li>
+
+                <li> <a href="https://www.songho.ca/opengl/gl_sphere.html" target="_blank" style="text-decoration:underline"> <s>stolen</s> code</a> to render a sphere,</li>
+
+                <li><a href="https://github.com/kcat/openal-soft" target="_blank" style="text-decoration:underline">OpenALSoft</a> to play a sound, </li>
+
+                <li><a href="https://github.com/ocornut/imgui" target="_blank" style="text-decoration:underline">ImGui</a> for the UI elements and interaction.</li>
+            </ul>
+            
+            <p style="text-align: left; margin-left: 5%; margin-right: 5%; max-height: 100%; margin-top: 0px; margin-bottom: 0px;">
+                    The wave reader was never used, as I prioritised the 3D rendering. 
+
+                    <br><br>
+                    REFLECTION
+                    <br>
+
+             </p>
 
         </div>
 
-        <div class="left-column div-red" style="max-height: 520px;">
+        <div class="left-column div-red" >
 
-            <h2>Rhythm Strategy (Working Title)</h2>
+            <h2>Rhythm Strategy</h2>
             <h4>UnrealEngine 5 | C++ | Blueprints | Git</h4>
 
             <p style="text-align: left; margin-left: 5%; margin-right: 5%;">
@@ -89,13 +91,13 @@
 
         </div>
 
-        <div class="right-column div-black" style="max-height: 520px;">
+        <div class="right-column div-black" style="min-height: 25vh;">
 
             <img src="images/RhythmStrategy v1.gif">
 
         </div>
 
-        <div class="left-column div-black" style="max-height: 520px;">
+        <div class="left-column div-black" style="min-height: 25vh;">
 
             <img src="images/Rogue Poker v1.gif">
 
@@ -151,13 +153,13 @@
 
         </div>
 
-        <div class="right-column div-black" style="max-height: 520px;">
+        <div class="right-column div-black" style="min-height: 25vh;">
 
             <img src="images/LosingTrack v1.gif">
 
         </div>
 
-        <div class="left-column div-black" style="max-height: 520px;">
+        <div class="left-column div-black" style="min-height: 25vh;">
 
             <img src="images/InnerDemons v1.gif">
 
