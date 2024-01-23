@@ -35,43 +35,50 @@
         <div class="right-column div-blue" style="min-height: 25vh; height: 600px; ">
 
             <h2 style="margin-bottom: 0px;">Audio Spikes</h2>
-            <h3 style="margin-top: 0px; margin-bottom: 0px;">C++ | OpenGL | OpenALSoft | ImGui</h3>
+            <h3 style="margin-top: 0px;">C++ | OpenGL | OpenALSoft | ImGui</h3>
 
             <p style="text-align: left; margin-left: 5%; margin-right: 5%; max-height: 100%; margin-top: 0px; margin-bottom: 0px;">
 
-                An app where the user can rotate and edit a 3D object.
+                A solo developed app where the user can rotate and edit a 3D object.
                 <br><br>
-                The concept is to have the surface of the sphere deform based on an imported wave file.
+                The concept is to have the surface of the sphere deform based on an imported wave file, creating a unique spiky ball depending on the audio.
                 <br><br>
                 External Libraries:
             </p>
             
             <ul style="text-align: left; margin-left: 5%; margin-right: 5%; margin-top:0px ;margin-bottom:0px;">
 
-                <li> <a href="https://github.com/libsndfile/libsndfile" target="_blank" style="text-decoration:underline">libsndfile</a> as a wave file reader, </li>
+                <li> <a href="https://github.com/libsndfile/libsndfile" target="_blank" style="text-decoration:underline">libsndfile</a> as a wave file reader</li>
 
-                <li> <a href="https://www.songho.ca/opengl/gl_sphere.html" target="_blank" style="text-decoration:underline"> <s>stolen</s> code</a> to render a sphere,</li>
+                <li> <a href="https://www.songho.ca/opengl/gl_sphere.html" target="_blank" style="text-decoration:underline"> <s>stolen</s> code</a> to render a sphere</li>
 
-                <li><a href="https://github.com/kcat/openal-soft" target="_blank" style="text-decoration:underline">OpenALSoft</a> to play a sound, </li>
+                <li><a href="https://github.com/kcat/openal-soft" target="_blank" style="text-decoration:underline">OpenALSoft</a> to play a sound</li>
 
-                <li><a href="https://github.com/ocornut/imgui" target="_blank" style="text-decoration:underline">ImGui</a> for the UI elements and interaction.</li>
+                <li><a href="https://github.com/ocornut/imgui" target="_blank" style="text-decoration:underline">ImGui</a> for the UI elements and interaction</li>
             </ul>
             
-            <p style="text-align: left; margin-left: 5%; margin-right: 5%; max-height: 100%; margin-top: 0px; margin-bottom: 0px;">
-                    The wave reader was never used, as I prioritised the 3D rendering. 
+            <p style="text-align: left; margin-left: 5%; margin-right: 5%; max-height: 100%; margin-top: 0px;">
+                <br>
+                The sphere is structured using rows and columns, which can be increased or reduced by using the sliders created in imgui to adjust the level of the detail.
+                The object can be rotated locally by pressing WASD.
+                After texture coordinates are assigned it uses a simple vertex and fragment shader to render the object.
+                <br>
+                libsndfile was never used because the 3D rendering was prioritised for marking criteria. BUT I saw this as an opportunity to learn more about binary file reading!
+                So I've created a simple reader for <abbr title="Resource Interchange File Format">RIFF</abbr> WAVE files which outputs PCM data, and all that's left on the data side is to revert that to sample data to be assigned to vertices.
+                <br><br>
+                REFLECTION
+                <br>
+                I didn't forsee the local rotation "bug", which I'd fix by using rotation offsets instead of directly adjusting the object's.
+                I was aiming way too high trying to learn OpenGL and OpenALsoft at the same time, although they are purposefully similar, it just compounded confusion.
 
-                    <br><br>
-                    REFLECTION
-                    <br>
-
-             </p>
+            </p>
 
         </div>
 
         <div class="left-column div-red" >
 
-            <h2>Rhythm Strategy</h2>
-            <h4>UnrealEngine 5 | C++ | Blueprints | Git</h4>
+            <h2 style="margin-bottom: 0px;">Rhythm Strategy</h2>
+            <h3 style="margin-top: 0px;">UnrealEngine 5 | C++ | Blueprints | Git</h3>
 
             <p style="text-align: left; margin-left: 5%; margin-right: 5%;">
 
@@ -79,7 +86,9 @@
                 <br>
                 The answer is "not really"...So I made one.
                 <br><br>
-                
+                The game has a metronome tick to
+
+                I made a promise to only use simple, in-engine shapes so that I wouldn't get caught up on the art aspect the game as it wasn't necessary for the concept. The game 
             
             
             </p>
@@ -101,22 +110,24 @@
 
         <div class="right-column div-blue">
 
-            <h2>Rogue Poker</h2>
-            <h4>Unity | C# | Teamwork | Github</h4>
+            <h2 style="margin-bottom: 0px;">Rogue Poker</h2>
+            <h3 style="margin-top: 0px;">Unity | C# | Teamwork | 3D Modelling</h3>
 
             <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
 
                 Rock-Paper-Scissors meets Poker! Bet on each piece and have all your plans get radically changed as the dealer reveals their favoured choice. Buy and bluff your way to victory against AI opponents.
                 <br><br>
-                A fun group project we created for our Team Enterprise module in Uni. I was the Co-Project Manager responsible for audio, art, partial modelling, meetings, and project-level documentation (risk assessments, etc.).
-                I created the card flip animations, card models, the music, the sound effects, and the audio manager script used in the game. We first went through a paper mock-up of the game which gave us a baseline in terms of testing and helped pin-point what needs work, which we did iterate on successfully.
                 We used Agile and Scrum principles, having regular sprint meetings to update and review the project, adjusting goals to better adapt to issues that arose.
+                I was the Co-Project Manager responsible for meetings and project-level documentation (risk assessments, etc.). I used an audio system I coded in a previous project to manage the sounds.
+                I composed, mixed, and produced all the audio. I modelled the cards and created the flip animation.
+                We first went through a paper mock-up of the game which gave us a baseline in terms of testing and helped pin-point what needs work, which we did iterate on successfully.
                 <br><br>
-
-                Things I'd do differently: I'd put more of an emphasis on note-taking DURING development as there were many aspects that weren't communicated clearly due the size of the team and different work-styles.
-                There is a slight mis-match in aesthetics via texturing, and there is often a lot on screen which is not communicated in the most efficient way, which can lead to confusion in what to do next.
-                From a UX standpoint, the mechanics themselves often left people confused (and even confused the team occasionally), hence the big red help screen. Which was the most we could do at the time, but could definitely be better explained through a step-by-step tutorial.
-                <br><br>
+                REFLECTION
+                <br>
+                I'd put more of an emphasis on note-taking DURING development as there were many aspects that weren't communicated clearly due the size of the team and different work-styles.
+                There is a slight mis-match in aesthetics via texturing, and there is often a lot on screen which is not communicated clearly, which can lead to confusion regarding whatever is going on.
+                The mechanics themselves often left people confused (and even confused the team occasionally), hence the big red help button, which was the most we could do at the time but could definitely be better explained through a step-by-step tutorial.
+                <br>
                 This was a very stressful project due to some issues that arose within the team, but it was all handled constructively and I'm proud of what we were able to achieve.
 
 
@@ -126,8 +137,8 @@
 
         <div class="left-column div-red">
 
-            <h2>Losing Track</h2>
-            <h4>Unity | C# | Teamwork | Blender</h4>
+            <h2 style="margin-bottom: 0px;">Losing Track</h2>
+            <h3 style="margin-top: 0px;">Unity | C# | Github | Sound Design</h3>
 
             <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
 
@@ -135,14 +146,16 @@
                 <br>
                 An arcade time-attack, train game. You control the acceleration and tilt of your train to avoid hazards and turn as efficiently as possible to keep your speed.
                 <br><br>
-                I was responsible for some of the environment models (rocks and cliffs), implementing the audio system used for playing all the sound in the game, and I composed the music used in the main menu, levels, all the sound effects for button clicks, win-screens, and train sounds.
-                <br><br>
-                A very fun project that taught me a lot about how to coordinate with different disciplines and how different parts of a game come together. With a plethora of things to be done better since it was one of our first team projects. We had a lot of "fun" figuring out the quirks of Github and Unity...A lot of progress was lost more than once.
+                I programmed the audio system used for playing all the sound in the game in-time with events. It's a class that holds an array of a custom Sound objects which allow Unity audio objects to be manipulated in the editor. Each sound has a string identifier which can be called by the event system.
                 <br>
-                The system I had for audio did not scale well. It used a string to find the correct sound in an array, and I unfortuantely couldn't spend time optimising the search and was yet unaware of maps, but with the hand-full of sounds we had, it worked quite well. I even got Unity to change the pitch of a single file with each consecutive tilt!
-
+                I composed, mixed, and produced all the music and sound effects used for menus, levels, and trains. I even modelled some of the environment such as rocks, cliffs, and dead trees.
                 <br><br>
-                With a combination of really talented artists and extremely intelligent coders (and myself), I'm SUPER happy with how this project ended up looking and feeling, and I hope I get the chance to work with my friends again at some point in the future.
+                REFLECTION
+                <br>
+                This taught me how to coordinate with different disciplines and how various systems come together. We had a lot of "fun" figuring out the quirks of Github and Unity...A lot of progress was lost more than once.
+                The system I had for audio did not scale well. It used a string to search and find the correct sound in an array, but with the hand-full of sounds we had, it worked quite well. I even got Unity to change the pitch of a sound with each consecutive tilt!
+                <br>
+                I'm SUPER happy with how this project looks and feels, and I hope I get the chance to work with my friends again at some point in the future.
 
             </p>
 
@@ -163,8 +176,8 @@
 
         <div class="right-column div-blue">
 
-            <h2>Inner Demons</h2>
-            <h4>Unity | C# | Git | GIMP</h4>
+            <h2 style="margin-bottom: 0px;">Inner Demons</h2>
+            <h3 style="margin-top: 0px;">Unity | C# | Animation | Game Design</h3>
 
             <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
 
@@ -172,12 +185,14 @@
                 <br>
                 My first ever game project which I'm still proud of. Created using Unity, I drew all the art assets, created all the music and sound effects, and coded all the enemies and controls.
                 <br><br>
-                The enemies were the most challenging bit, giving them all unique approaches to messing with the player. The fiery demons charge at you, the blobs shoot negative words at you, and the tendril ones summon more of them while keeping their distance.
-                They each feel unique visually and they have clear damage states that took FOREVER to set-up with the state-animation in Unity. There was even a fun "feature" where you could shoot the negative words to cancel them, which was kept because I liked the theming around that.
-                <br>
-                I bit off far more than I should have for this (noticing a pattern?), The art was not a marked part of the project and the enemy AI pathing was clunky and did not account for obstacles. The tiles didn't always align with physics boundaries, which led to awkward overlaps, and in the executeable there's a fun bug that crashes the game when you win. 
+                The enemies were the most challenging bit, giving them all unique ways to mess with the player. The fiery demons charge at you, the blobs shoot negative words at you, and the tendril ones summon more enemies while keeping their distance.
+                They each feel unique visually and they have clear damage states that took FOREVER to draw and integrate with the state-animation in Unity. There was even a fun "feature" where you could shoot the negative words to cancel them, which was kept because I liked the theming around that.
                 <br><br>
-                But despite all it's flaws it's project where I learned I could create whatever I wanted (within reason). And I will always have on a pedestal, with all its flaws.
+                REFLECTION
+                <br>
+                I prioritised art too much. The art was not a marked part of the project and the enemy AI pathing was clunky and didn't account for obstacles. The tiles didn't always align with physics colliders, which led to awkward overlaps, and in the executeable there's a bug that crashes the game when you win.
+                <br>
+                But despite all its flaws it's a project where I learned I could create whatever I wanted (within reason). And I will always have it on a pedestal, with all its flaws.
 
             </p>
 

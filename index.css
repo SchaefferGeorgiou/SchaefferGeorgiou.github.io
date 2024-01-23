@@ -37,7 +37,7 @@ body {
     font-size: 1.25rem;
     text-size-adjust: auto;
     line-height: 1.5;
-    
+    overflow: scroll;
 }
 
 .div-blue {
@@ -49,8 +49,8 @@ body {
     max-height: 100vh;
     font-size: 1.25rem;
     text-size-adjust: auto;
-    overflow: scroll;
     line-height: 1.5;
+    overflow: scroll;
 }
 
 .div-black {
@@ -62,8 +62,8 @@ body {
     max-height: 100vh;
     font-size: 1.25rem;
     text-size-adjust: auto;
-    overflow: scroll;
     line-height: 1.5;
+    overflow: scroll;
 }
 
 
