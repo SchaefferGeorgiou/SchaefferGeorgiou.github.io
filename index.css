@@ -8,11 +8,15 @@ body {
 
 }
 
-  p, h3{
+  p{
     font-family: "Roboto";
     
     color:white;
   }
+h3 {
+    font-family: "Roboto Thin";
+    
+}
 
   h4{
     font-family: "Roboto Thin";
@@ -175,13 +179,14 @@ img {
 a {
     color: inherit;
     transition: color 0.5s;
+    word-spacing: 0rem;
 }
 
 a:link {
 
     color:inherit;
-    text-decoration:none;
-
+    text-decoration: none;
+    
 }
 
 a:visited {

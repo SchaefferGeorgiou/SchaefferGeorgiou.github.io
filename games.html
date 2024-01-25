@@ -15,6 +15,7 @@
 
 
 
+
 </head>
 <body>
 
@@ -22,17 +23,84 @@
 
         <div class="div-black" style="padding-bottom: 2vh; padding-top: 2vh;">
 
-            <a href="index.html"><h1>G A M E S</h1></a>
+            <h1>
+                <a href="index.html" style="text-decoration:none;">SCHAEFFER GEORGIOU</a>
+            </h1>
+            <br>
+            <nav style="word-spacing: 2rem;">
+                <a href="#rhythm-strategy">Rhythm Strategy</a> |
+                <a href="#audio-spikes">Audio Spikes</a> |
+                <a href="#losing-track">Losing Track</a> |
+                <a href="#rogue-poker">Rogue Poker</a> |
+                <a href="#inner-demons">Inner Demons</a>
+
+            </nav>
+        </div>
+
+        <div class="div-black" style="min-height: 25vh;">
+
+                <img src="images/RhythmStrategy v1.gif">
 
         </div>
 
-        <div class=" div-black" style="min-height: 25vh; height: 600px; ">
+        <div id="rhythm-strategy" class="div-red">
+
+                <h2 style="margin-bottom: 0px;">Rhythm Strategy</h2>
+                <h3 style="margin-top: 0px;">UnrealEngine 5 | C++ | Blueprints | Threads</h3>
+                <p style="text-align: left; margin-left: 5%; margin-right: 5%;">
+
+                    "Is there a real-time strategy rhythm game?"
+                    <br>
+                    The answer is "not really"...So I made one.
+                    <br>
+                    Here's a short video describing the mechanics, below it is a technical rundown...
+                    <br>
+                </p>
+
+                <iframe src="https://www.youtube.com/embed/gPDeNRw42rQ?si=-sHOJqGKw3JFHy6m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="margin-left: 7.5vw; padding-top:2%; height:25vh; width:25vw"></iframe>
+
+                <p style="text-align: left; margin-left: 5%; margin-right: 5%;">
+                    <br><br>
+                    Every level has a Conductor which manages the triggering of events and sounds, it has an array of all the Commanders in the level.
+                    The Commanders are what players control and they keep track of what Units are owned and able to be controlled by that Commmander.
+                    Units are the game pieces that host a variety of components which determine their function.
+                    <br><br>
+                    A metronome audibly ticks in the level, the player is able to move the camera, select and move blue units, then target and attack yellow units. When within range, a sound is played in-time with the metronome to indicate a unit is making its attack against the enemy.
+                    <br><br>
+                    The rhythm aspect of the game makes use of the Quartz subsystem in Unreal, running on a separate audio tick from the game, leading to a beat delay from what's visually happening on screen vs what is being heard. It was also primarily designed to be used as blueprints and taught me some very humbling lessons in how not to integrate C++ created classes still being edited, as changing variable through code would often break existing blueprint iterations.
+                    <br><br>
+                    I leaned heavily into inheritance so that new units and mechanics could be added by simply adding new Unreal components to derived Actors.
+                    <br>
+                    I created a simple damage system instead of using Unreal's existing one, because I didn't need a lot of the features it had for the prototype.
+                    This did give me a chance to learn in more detail how delegates work, since my main experience at this point was with the Unity event system.
+                    <br>
+                    I made a promise to only use simple, in-editor shapes so that I wouldn't get caught up on the art aspect the game as it wasn't necessary for the concept.
+                    <br>
+                    I did make use of Lumen, but for fast changing camera positions this wouldn't work because it takes time for the camera to be correctly exposed, leading to a very cinematic look, but doesn't work for faster gameplay RTS is known for.
+                    Which is why games like Stormgate aren't using it either.
+                    <br>
+                    I made use of the in-built pathing, which isn't very smart and doesn't account for obstacles, but allowed me to focus on the rhythm aspect of the game. I did added a little coordinate offset so groups create formations, but this doesn't account for anything other than a flat plane.
+                    <br><br>
+                    REFLECTION
+                    <br>
+                    This project was hard. I learned a lot about the inner workings of event systems, the difficulties of working with 2 different threads and ensuring they worked "in sync". I spent a lot of time trying to create an integrated landscape-grid component that went nowhere.
+                    Most of the internet doesn't like talking about Unreal Engine in terms of C++, a lot of tutorials are only bluepirint based, so I got very good at reverse-engineering from those. Due to UE5 being quite new there were a plethora of bugs or issues that I'd be stuck on for days.
+                    Always double how much time you think you need! I scoped too big and it hurt me by the end. But the idea is solid and I now know how to do it better next time.
+
+                    </p>
+
+
+
+        </div>
+       
+
+        <div class=" div-black" style="min-height: 25vh; ">
 
             <img src="images/Audio Spikes v1.gif">
 
         </div>
 
-        <div class="div-blue" style="min-height: 25vh; ">
+        <div id="audio-spikes" class="div-blue">
 
             <h2 style="margin-bottom: 0px;">Audio Spikes</h2>
             <h3 style="margin-top: 0px;">C++ | OpenGL | OpenALSoft | ImGui</h3>
@@ -75,65 +143,6 @@
 
         </div>
 
-        <div class="div-black" style="min-height: 25vh;">
-
-            <img src="images/RhythmStrategy v1.gif">
-
-        </div>
-
-        <div class="div-red">
-
-            <h2 style="margin-bottom: 0px;">Rhythm Strategy</h2>
-            <h3 style="margin-top: 0px;">UnrealEngine 5 | C++ | Blueprints | Git</h3>
-
-            <p style="text-align: left; margin-left: 5%; margin-right: 5%;">
-
-                "Is there a real-time strategy rhythm game?"
-                <br>
-                The answer is "not really"...So I made one.
-                <br>
-                Here's a short video describing the mechanics, below it is a more detailed breakdown...
-
-                <br>
-            </p>
-
-            <iframe src="https://www.youtube.com/embed/gPDeNRw42rQ?si=-sHOJqGKw3JFHy6m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="margin-left: 7.5vw; padding-top:2%; height:25vh; width:25vw"></iframe>
-
-            <p style="text-align: left; margin-left: 5%; margin-right: 5%;">
-                <br><br>
-                Every level has a Conductor which manages the triggering of events and sounds, it has an array of all the Commanders in the level.
-                The Commanders are what players control and they keep track of what Units are owned and able to be controlled by that Commmander.
-                Units are the game pieces that host a variety of components which determine their function.
-                <br><br>
-                A metronome audibly ticks in the level, the player is able to move the camera, select and move blue units, then target and attack yellow units. When within range, a sound is played in-time with the metronome to indicate a unit is making its attack against the enemy.
-                <br><br>
-                The rhythm aspect of the game makes use of the Quartz subsystem in Unreal, running on a separate audio tick from the game, leading to a beat delay from what's visually happening on screen vs what is being heard. It was also primarily designed to be used as blueprints and taught me some very humbling lessons in how not to integrate C++ created classes still being edited, as changing variable through code would often break existing blueprint iterations.
-                <br><br>
-                I leaned heavily into inheritance so that new units and mechanics could be added by simply adding new Unreal components to derived Actors.
-                <br>
-                I created a simple damage system instead of using Unreal's existing one, because I didn't need a lot of the features it had for the prototype.
-                This did give me a chance to learn in more detail how delegates work, since my main experience at this point was with the Unity event system.
-                <br>
-                I made a promise to only use simple, in-editor shapes so that I wouldn't get caught up on the art aspect the game as it wasn't necessary for the concept.
-                <br>
-                I did make use of Lumen, but for fast changing camera positions this wouldn't work because it takes time for the camera to be correctly exposed, leading to a very cinematic look, but doesn't work for faster gameplay RTS is known for.
-                Which is why games like Stormgate aren't using it either.
-                <br>
-                I made use of the in-built pathing, which isn't very smart and doesn't account for obstacles, but allowed me to focus on the rhythm aspect of the game. I did added a little coordinate offset so groups create formations, but this doesn't account for anything other than a flat plane.
-                <br><br>
-                REFLECTION
-                <br>
-                This project was hard. I learned a lot about the inner workings of event systems, the difficulties of working with 2 different threads and ensuring they worked "in sync". I spent a lot of time trying to create an integrated landscape-grid component that went nowhere.
-                Most of the internet doesn't like talking about Unreal Engine in terms of C++, a lot of tutorials are only bluepirint based, so I got very good at reverse-engineering from those. Due to UE5 being quite new there were a plethora of bugs or issues that I'd be stuck on for days.
-                Always double how much time you think you need! I scoped too big and it hurt me by the end. But the idea is solid and I now know how to do it better next time.
-
-            </p>
-
-
-
-        </div>
-
-
 
         <div class="left-column div-black" style="min-height: 25vh;">
 
@@ -142,10 +151,15 @@
 
         </div>
 
-        <div class="div-blue">
+        <div id="rogue-poker" class="div-blue">
 
             <h2 style="margin-bottom: 0px;">Rogue Poker</h2>
-            <h3 style="margin-top: 0px;">Unity | C# | Teamwork | 3D Modelling</h3>
+            <h3 style="margin-top: 0px; margin-bottom: 0px;">Unity | C# | Teamwork | 3D Modelling</h3>
+
+            <h3 style="margin-top: 0px;">
+                <a href="https://thejacobedward.wixsite.com/fungeonswagons/rogue-poker" target="_blank">Game Website</a>
+            </h3>
+            
 
             <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
 
@@ -175,10 +189,13 @@
 
         </div>
 
-        <div class="div-red">
+        <div id="losing-track" class="div-red">
 
             <h2 style="margin-bottom: 0px;">Losing Track</h2>
-            <h3 style="margin-top: 0px;">Unity | C# | Github | Sound Design</h3>
+            <h3 style="margin-top: 0px; margin-bottom: 0px;">Unity | C# | Github | Sound Design</h3>
+            <h3 style="margin-top: 0px;"> 
+                <a href="https://jacob-rowe.itch.io/losing-track" target="_blank">itch.io Page</a>
+            </h3>
 
             <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
 
@@ -210,10 +227,13 @@
 
         </div>
 
-        <div class="div-blue">
+        <div id="inner-demons" class="div-blue">
 
             <h2 style="margin-bottom: 0px;">Inner Demons</h2>
-            <h3 style="margin-top: 0px;">Unity | C# | Animation | Game Design</h3>
+            <h3 style="margin-top: 0px; margin-bottom: 0px;">Unity | C# | Animation | Game Design</h3>
+            <h3 style="margin-top: 0px;">
+                <a href="https://schaefferinator.itch.io/inner-demons" target="_blank">itch.io Page</a>
+            </h3>
 
             <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
 
