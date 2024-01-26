@@ -1,212 +1,263 @@
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en">
-<head>
-    <meta name="keywords" content="Projects, Portfolio, Game Developer, Games">
-    <meta name="description" content="Game Portfolio">
-    <meta name="author" content="Schaeffer Georgiou">
+    <head>
+        <meta name="keywords" content="Projects, Portfolio, Game Developer, Games">
+        <meta name="description" content="Game Developer Portfolio">
+        <meta name="author" content="Schaeffer Georgiou">
 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
 
+        <title>Schaeffer Georgiou: Games</title>
 
-    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
 
-    <title>Schaeffer Georgiou: Games</title>
-
-    <!--style="color:#31b1ff;"
-        style="color:#314aff;"
-        style="color:#7f31ff;"
-        style="color:#e631ff;"
-        style="color:#ff31b1;"
-        style="color:#ff314a;"-->
-
-
-</head>
-<body>
-
-    <div class="grid-container">
-
-        <div class="full-row div-black" style="padding-bottom: 5%;">
-
-            <a href="index.html"><h1>G A M E S</h1></a>
-            <h3 style="font-family: Roboto Thin;">Games and Software Development</h3>
-            <h4 style="font-family: Roboto Thin; font-style: italic;">Any language with a 'C' | UnrealEngine | Unity | OpenGL</h4>
-
+        <div class="div-black" style="position:sticky; top:0%; width: 10vw; height: 5vh; border-radius: 0 0 50% 50%; margin-left:auto; margin-right: 0;">
+            <a href="#games-top">Back to Top</a>
         </div>
+        
 
-        <div class="left-column div-black" style="max-height: 520px;">
+        <div class="grid-container">
 
-            <img src="images/Audio Spikes v1.gif">
+            <div class="div-black" id="games-top" style="padding-bottom: 2vh; padding-top: 2vh;">
 
-        </div>
-
-        <div class="right-column div-blue">
-
-            <h2>Audio Spikes</h2>
-            <h4>OpenGL | OpenALSoft | C / C++ | ImGui</h4>
-
-            <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
-
-                My foray into audio and visual programming! It was originally a project for my Immersive Game Technologies module where we needed to create an interactable piece of software using OpenGL.
-                <br><br>
-                The idea was to have a 3D sphere whose surface would have vertices extruded depending on the wave file read in. Creating a visual representation of the audio data that could be rotated freely while the wave file played...
+                <h1>
+                    <a href="index.html" style="text-decoration:none;">SCHAEFFER GEORGIOU</a>
+                </h1>
                 <br>
-                This was going to be achieved by using an <a href="https://github.com/libsndfile/libsndfile" target="_blank">external wave file reader</a>, <a href="https://www.songho.ca/opengl/gl_sphere.html" target="_blank"> <s>stolen</s> borrowed code to render a sphere </a>, <a href="https://github.com/kcat/openal-soft" target="_blank">OpenALSoft</a> to play a sound, and finally <a href="https://github.com/ocornut/imgui" target="_blank">ImGui</a> for the UI elements and interaction.
-                <br><br>
-                A bold decision, as someone who had no experience with binary file reading, minimal understanding of 3D rendering, and somehow less knowledge about audio playback...
+                <nav style="word-spacing: 2rem;">
+                    <a href="#rhythm-strategy">Rhythm Strategy</a> |
+                    <a href="#audio-spikes">Audio Spikes</a> |
+                    <a href="#losing-track">Losing Track</a> |
+                    <a href="#rogue-poker">Rogue Poker</a> |
+                    <a href="#inner-demons">Inner Demons</a>
 
-                <br><br>
-                So none of the audio aspect was done by hand-in, but I was able to have the sphere rotate and change the amount of vertices on the sphere. As that was the main thing required to prove I understood the principles at hand.
+                </nav>
+            </div>
 
-                <br>
-                Main thing I'd do differently is not try to add an entire language to a project I wasn't going to be marked on.
-                BUT I am currently re-attempting the project! Trying to complete the original idea. I've recently finished my wave file reader, which has given me an understanding of binary file reading, file structures, and PCM data.
-                Code hell, but educational code hell.
-            </p>
+            <div id="rhythm-strategy" class="div-red">
+
+                <h2 style="margin-bottom: 0px;">Rhythm Strategy</h2>
+                <h3 style="margin-top: 0px; margin-bottom: 0px;">UnrealEngine 5 | C++ | Blueprints | Threads</h3>
+                <h3 style="margin-top: 0px;">
+                    <a href="https://schaefferinator.itch.io/rhythm-strategy" target="_blank" style="text-decoration:underline;">itch.io Page</a>
+                </h3>
+                <p style="text-align: left; margin-left: 5%; margin-right: 5%;">
+
+                    "Is there a real-time strategy rhythm game?"
+                    <br>
+                    The answer is "not really"...So I made one.
+                    <br>
+                    Here's a short video describing the mechanics, below it is a technical rundown...
+                    <br>
+                </p>
+
+                <iframe src="https://www.youtube.com/embed/gPDeNRw42rQ?si=-sHOJqGKw3JFHy6m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="margin-left: 7.5vw; padding-top:2%; height:25vh; width:25vw"></iframe>
+
+                <p style="text-align: left; margin-left: 5%; margin-right: 5%;">
+                    <br><br>
+                    Every level has a Conductor which manages the triggering of events and sounds, it has an array of all the Commanders in the level.
+                    The Commanders are what players control and they keep track of what Units are owned and able to be controlled by that Commmander.
+                    Units are the game pieces that host a variety of components which determine their function.
+                    <br><br>
+                    A metronome audibly ticks in the level, the player is able to move the camera, select and move blue units, then target and attack yellow units. When within range, a sound is played in-time with the metronome to indicate a unit is making its attack against the enemy.
+                    <br><br>
+                    The rhythm aspect of the game makes use of the Quartz subsystem in Unreal, running on a separate audio tick from the game, leading to a beat delay from what's visually happening on screen vs what is being heard. It was also primarily designed to be used as blueprints and taught me some very humbling lessons in how not to integrate C++ created classes still being edited, as changing variable through code would often break existing blueprint iterations.
+                    <br><br>
+                    I leaned heavily into inheritance so that new units and mechanics could be added by simply adding new Unreal components to derived Actors.
+                    <br>
+                    I created a simple damage system instead of using Unreal's existing one, because I didn't need a lot of the features it had for the prototype.
+                    This did give me a chance to learn in more detail how delegates work, since my main experience at this point was with the Unity event system.
+                    <br>
+                    I made a promise to only use simple, in-editor shapes so that I wouldn't get caught up on the art aspect the game as it wasn't necessary for the concept.
+                    <br>
+                    I did make use of Lumen, but for fast changing camera positions this wouldn't work because it takes time for the camera to be correctly exposed, leading to a very cinematic look, but doesn't work for faster gameplay RTS is known for.
+                    Which is why games like Stormgate aren't using it either.
+                    <br>
+                    I made use of the in-built pathing, which isn't very smart and doesn't account for obstacles, but allowed me to focus on the rhythm aspect of the game. I did added a little coordinate offset so groups create formations, but this doesn't account for anything other than a flat plane.
+                    <br><br>
+                    REFLECTION
+                    <br>
+                    This project was hard. I learned a lot about the inner workings of event systems, the difficulties of working with 2 different threads and ensuring they worked "in sync". I spent a lot of time trying to create an integrated landscape-grid component that went nowhere.
+                    Most of the internet doesn't like talking about Unreal Engine in terms of C++, a lot of tutorials are only bluepirint based, so I got very good at reverse-engineering from those. Due to UE5 being quite new there were a plethora of bugs or issues that I'd be stuck on for days.
+                    Always double how much time you think you need! I scoped too big and it hurt me by the end. But the idea is solid and I now know how to do it better next time.
+
+                </p>
+
+
+
+            </div>
+
+            <div class="div-black" style="min-height: 25vh;">
+
+                <img src="images/RhythmStrategy v1.gif">
+
+            </div>
+
+            <div id="audio-spikes" class="div-blue">
+
+                <h2 style="margin-bottom: 0px;">Audio Spikes</h2>
+                <h3 style="margin-top: 0px;">C++ | OpenGL | OpenALSoft | ImGui</h3>
+
+                <p style="text-align: left; margin-left: 5%; margin-right: 5%; max-height: 100%; margin-top: 0px; margin-bottom: 0px;">
+
+                    A solo developed app where the user can rotate and edit a 3D object.
+                    <br><br>
+                    The concept is to have the surface of the sphere deform based on an imported wave file, creating a unique spiky ball depending on the audio.
+                    <br><br>
+                    External Libraries:
+                </p>
+
+                <ul style="text-align: left; margin-left: 5%; margin-right: 5%; margin-top:0px ;margin-bottom:0px;">
+
+                    <li> <a href="https://github.com/libsndfile/libsndfile" target="_blank" style="text-decoration:underline">libsndfile</a> as a wave file reader</li>
+
+                    <li> <a href="https://www.songho.ca/opengl/gl_sphere.html" target="_blank" style="text-decoration:underline"> <s>stolen</s> code</a> to render a sphere</li>
+
+                    <li><a href="https://github.com/kcat/openal-soft" target="_blank" style="text-decoration:underline">OpenALSoft</a> to play a sound</li>
+
+                    <li><a href="https://github.com/ocornut/imgui" target="_blank" style="text-decoration:underline">ImGui</a> for the UI elements and interaction</li>
+                </ul>
+
+                <p style="text-align: left; margin-left: 5%; margin-right: 5%; max-height: 100%; margin-top: 0px;">
+                    <br>
+                    The sphere is structured using rows and columns, which can be increased or reduced by using the sliders created in imgui to adjust the level of the detail.
+                    The object can be rotated locally by pressing WASD.
+                    After texture coordinates are assigned it uses a simple vertex and fragment shader to render the object.
+                    <br>
+                    libsndfile was never used because the 3D rendering was prioritised for marking criteria. BUT I saw this as an opportunity to learn more about binary file reading!
+                    So I've created a simple reader for <abbr title="Resource Interchange File Format">RIFF</abbr> WAVE files which outputs PCM data, and all that's left on the data side is to revert that to sample data to be assigned to vertices.
+                    <br><br>
+                    REFLECTION
+                    <br>
+                    I didn't forsee the local rotation "bug", which I'd fix by using rotation offsets instead of directly adjusting the object's.
+                    I was aiming way too high trying to learn OpenGL and OpenALsoft at the same time, although they are purposefully similar, it just compounded confusion.
+
+                </p>
+
+            </div>
+
+            <div class=" div-black" style="min-height: 25vh; ">
+
+                <img src="images/Audio Spikes v1.gif">
+
+            </div>
+
+
+            <div id="rogue-poker" class="div-red">
+
+                <h2 style="margin-bottom: 0px;">Rogue Poker</h2>
+                <h3 style="margin-top: 0px; margin-bottom: 0px;">Unity | C# | Teamwork | 3D Modelling</h3>
+
+                <h3 style="margin-top: 0px;">
+                    <a href="https://thejacobedward.wixsite.com/fungeonswagons/rogue-poker" target="_blank" style="text-decoration:underline;">Game Website</a>
+                </h3>
+
+
+                <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
+
+                    Rock-Paper-Scissors meets Poker! Bet on each piece and have all your plans get radically changed as the dealer reveals their favoured choice. Buy and bluff your way to victory against AI opponents.
+                    <br><br>
+                    We used Agile and Scrum principles, having regular sprint meetings to update and review the project, adjusting goals to better adapt to issues that arose.
+                    I was the Co-Project Manager responsible for meetings and project-level documentation (risk assessments, etc.). I used an audio system I coded in a previous project to manage the sounds.
+                    I composed, mixed, and produced all the audio. I modelled the cards and created the flip animation.
+                    We first went through a paper mock-up of the game which gave us a baseline in terms of testing and helped pin-point what needs work, which we did iterate on successfully.
+                    <br><br>
+                    REFLECTION
+                    <br>
+                    I'd put more of an emphasis on note-taking DURING development as there were many aspects that weren't communicated clearly due the size of the team and different work-styles.
+                    There is a slight mis-match in aesthetics via texturing, and there is often a lot on screen which is not communicated clearly, which can lead to confusion regarding whatever is going on.
+                    The mechanics themselves often left people confused (and even confused the team occasionally), hence the big red help button, which was the most we could do at the time but could definitely be better explained through a step-by-step tutorial.
+                    <br>
+                    This was a very stressful project due to some issues that arose within the team, but it was all handled constructively and I'm proud of what we were able to achieve.
+
+
+                </p>
+
+            </div>
+
+
+            <div class="left-column div-black" style="min-height: 25vh;">
+
+                <img src="images/Rogue Poker v1.gif">
+
+
+            </div>
+
+
+            <div id="losing-track" class="div-blue">
+
+                <h2 style="margin-bottom: 0px;">Losing Track</h2>
+                <h3 style="margin-top: 0px; margin-bottom: 0px;">Unity | C# | Github | Sound Design</h3>
+                <h3 style="margin-top: 0px;">
+                    <a href="https://jacob-rowe.itch.io/losing-track" target="_blank" style="text-decoration:underline;">itch.io Page</a>
+                </h3>
+
+                <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
+
+                    Transport lost souls through the underworld! But be careful, there are plenty of hazards to slow you down and you're on the clock...
+                    <br>
+                    An arcade time-attack, train game. You control the acceleration and tilt of your train to avoid hazards and turn as efficiently as possible to keep your speed.
+                    <br><br>
+                    I programmed the audio system used for playing all the sound in the game in-time with events. It's a class that holds an array of a custom Sound objects which allow Unity audio objects to be manipulated in the editor. Each sound has a string identifier which can be called by the event system.
+                    <br>
+                    I composed, mixed, and produced all the music and sound effects used for menus, levels, and trains. I even modelled some of the environment such as rocks, cliffs, and dead trees.
+                    <br><br>
+                    REFLECTION
+                    <br>
+                    This taught me how to coordinate with different disciplines and how various systems come together. We had a lot of "fun" figuring out the quirks of Github and Unity...A lot of progress was lost more than once.
+                    The system I had for audio did not scale well. It used a string to search and find the correct sound in an array, but with the hand-full of sounds we had, it worked quite well. I even got Unity to change the pitch of a sound with each consecutive tilt!
+                    <br>
+                    I'm SUPER happy with how this project looks and feels, and I hope I get the chance to work with my friends again at some point in the future.
+
+                </p>
+
+            </div>
+
+            <div class="div-black" style="min-height: 25vh;">
+
+                <img src="images/LosingTrack v1.gif">
+
+            </div>
+
+            <div id="inner-demons" class="div-red">
+
+                <h2 style="margin-bottom: 0px;">Inner Demons</h2>
+                <h3 style="margin-top: 0px; margin-bottom: 0px;">Unity | C# | Animation | Game Design</h3>
+                <h3 style="margin-top: 0px;">
+                    <a href="https://schaefferinator.itch.io/inner-demons" target="_blank" style="text-decoration:underline;">itch.io Page</a>
+                </h3>
+
+                <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
+
+                    Combat your Inner Demons with words of affirmation! A top-down, arcade, "shooter". Run around a pixel-art dream-scape and to find a Moment of Joy to exit the level.
+                    <br>
+                    My first ever game project which I'm still proud of. Created using Unity, I drew all the art assets, created all the music and sound effects, and coded all the enemies and controls.
+                    <br><br>
+                    The enemies were the most challenging bit, giving them all unique ways to mess with the player. The fiery demons charge at you, the blobs shoot negative words at you, and the tendril ones summon more enemies while keeping their distance.
+                    They each feel unique visually and they have clear damage states that took FOREVER to draw and integrate with the state-animation in Unity. There was even a fun "feature" where you could shoot the negative words to cancel them, which was kept because I liked the theming around that.
+                    <br><br>
+                    REFLECTION
+                    <br>
+                    I prioritised art too much. The art was not a marked part of the project and the enemy AI pathing was clunky and didn't account for obstacles. The tiles didn't always align with physics colliders, which led to awkward overlaps, and in the executeable there's a bug that crashes the game when you win.
+                    <br>
+                    But despite all its flaws it's a project where I learned I could create whatever I wanted (within reason). And I will always have it on a pedestal, with all its flaws.
+
+                </p>
+
+            </div>
+
+            <div class="div-black" style="min-height: 25vh;">
+
+                <img src="images/InnerDemons v1.gif">
+
+
+            </div>
 
         </div>
 
-        <div class="left-column div-red" style="max-height: 520px;">
-
-            <h2>Rhythm Strategy (Working Title)</h2>
-            <h4>UnrealEngine 5 | C++ | Blueprints | Git</h4>
-
-            <p style="text-align: left; margin-left: 5%; margin-right: 5%;">
-
-                "Is there a Strategy Rhythm game?"
-                <br>
-                Is what I asked myself and thus my Honours project was born!
-                <br><br>
-                My first project in Unreal Engine 5, made using a majority C++, with some blueprints to access the Quartz Subsystem. A built-in event system on a fixed tick using Unreal's audio thread, which was used to have the entities in the game act on the beat.
-                This, and a combination of purpose-built classes that lean into UnrealEngine's use of inheritance to make referencing all objects and Units simpler. I created a simple damage system separate from UnrealEngine's built-in system to better understand relationships between actors and avoid all the extra functionality I wouldn't be using.
-                <br><br>
-                In terms of art I made use of simple geometric shapes and simple colours to minimise the amount of modeling and texturing necessary.
-                A lot of nice-to-haves were dropped due to the creeping deadline, but I do aim to develop this idea further and fine-tune the issues currently present.
-                <br><br>
-                I definitely did not manage my time as effectively as I could, focusing far too much on finding perfect solutions to problems rather than just getting something MADE. I learned a lot trying to deal with how the blueprint system wrapped methods I added and trying to use that in tandem with my live-coding. It was painful and a lot of restarting was required, but I found a workflow and learned what to look out for.
-                For future I would likely keep the 2 in their own realms and not trying to interweave blueprints with C++ as one would often break the other. Lastly I'd like to try add a <b>SET AMOUNT</b> of features to truly represent what I think could be a really fun experience.
-            </p>
-
-        </div>
-
-        <div class="right-column div-black" style="max-height: 520px;">
-
-            <img src="images/RhythmStrategy v1.gif">
-
-        </div>
-
-        <div class="left-column div-black" style="max-height: 520px;">
-
-            <img src="images/Rogue Poker v1.gif">
-
-
-        </div>
-
-        <div class="right-column div-blue">
-
-            <h2>Rogue Poker</h2>
-            <h4>Unity | C# | Teamwork | Github</h4>
-
-            <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
-
-                Rock-Paper-Scissors meets Poker! Bet on each piece and have all your plans get radically changed as the dealer reveals their favoured choice. Buy and bluff your way to victory against AI opponents.
-                <br><br>
-                A fun group project we created for our Team Enterprise module in Uni. I was the Co-Project Manager responsible for audio, art, partial modelling, meetings, and project-level documentation (risk assessments, etc.).
-                I created the card flip animations, card models, the music, the sound effects, and the audio manager script used in the game. We first went through a paper mock-up of the game which gave us a baseline in terms of testing and helped pin-point what needs work, which we did iterate on successfully.
-                We used Agile and Scrum principles, having regular sprint meetings to update and review the project, adjusting goals to better adapt to issues that arose.
-                <br><br>
-
-                Things I'd do differently: I'd put more of an emphasis on note-taking DURING development as there were many aspects that weren't communicated clearly due the size of the team and different work-styles.
-                There is a slight mis-match in aesthetics via texturing, and there is often a lot on screen which is not communicated in the most efficient way, which can lead to confusion in what to do next.
-                From a UX standpoint, the mechanics themselves often left people confused (and even confused the team occasionally), hence the big red help screen. Which was the most we could do at the time, but could definitely be better explained through a step-by-step tutorial.
-                <br><br>
-                This was a very stressful project due to some issues that arose within the team, but it was all handled constructively and I'm proud of what we were able to achieve.
-
-
-            </p>
-
-        </div>
-
-        <div class="left-column div-red">
-
-            <h2>Losing Track</h2>
-            <h4>Unity | C# | Teamwork | Blender</h4>
-
-            <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
-
-                Transport lost souls through the underworld! But be careful, there are plenty of hazards to slow you down and you're on the clock...
-                <br>
-                An arcade time-attack, train game. You control the acceleration and tilt of your train to avoid hazards and turn as efficiently as possible to keep your speed.
-                <br><br>
-                I was responsible for some of the environment models (rocks and cliffs), implementing the audio system used for playing all the sound in the game, and I composed the music used in the main menu, levels, all the sound effects for button clicks, win-screens, and train sounds.
-                <br><br>
-                A very fun project that taught me a lot about how to coordinate with different disciplines and how different parts of a game come together. With a plethora of things to be done better since it was one of our first team projects. We had a lot of "fun" figuring out the quirks of Github and Unity...A lot of progress was lost more than once.
-                <br>
-                The system I had for audio did not scale well. It used a string to find the correct sound in an array, and I unfortuantely couldn't spend time optimising the search and was yet unaware of maps, but with the hand-full of sounds we had, it worked quite well. I even got Unity to change the pitch of a single file with each consecutive tilt!
-
-                <br><br>
-                With a combination of really talented artists and extremely intelligent coders (and myself), I'm SUPER happy with how this project ended up looking and feeling, and I hope I get the chance to work with my friends again at some point in the future.
-
-            </p>
-
-        </div>
-
-        <div class="right-column div-black" style="max-height: 520px;">
-
-            <img src="images/LosingTrack v1.gif">
-
-        </div>
-
-        <div class="left-column div-black" style="max-height: 520px;">
-
-            <img src="images/InnerDemons v1.gif">
-
-
-        </div>
-
-        <div class="right-column div-blue">
-
-            <h2>Inner Demons</h2>
-            <h4>Unity | C# | Git | GIMP</h4>
-
-            <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
-
-                Combat your Inner Demons with words of affirmation! A top-down, arcade, "shooter". Run around a pixel-art dream-scape to find a Moment of Joy to exit the level.
-                <br>
-                My first ever game project which I'm still proud of. Created using Unity, I drew all the art assets, created all the music and sound effects, and coded all the enemies and controls.
-                <br><br>
-                The enemies were the most challenging bit, giving them all unique approaches to messing with the player. The fiery demons charge at you, the blobs shoot negative phrases at you, and the tendril-y ones summon more of them while keeping their distance.
-                They each feel unique visually and they have clear damage states that took FOREVER to set-up with the state-animation in Unity. There was even a fun "feature" where you could shoot the negative words to cancel them, which was kept because I liked the theming around that.
-                <br>
-                I bit off far more than I should have for this (noticing a pattern?), The art was not a marked part of the project and the enemy AI pathing was clunky and did not account for obstacles. The tiles didn't always align with physics boundaries, which led to awkward overlaps, and in the executeable there's a fun bug that crashes the game when you win. 
-                <br><br>
-                But despite all its flaws it's the project where I learned I could create whatever I wanted (within reason). And I will always have on a pedestal, WITH all its flaws.
-
-            </p>
-
-        </div>
-
-        <div class="full-row div-black"> </div>
-
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-</body>
-
-
-
+    </body>
 
 </html>

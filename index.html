@@ -11,107 +11,92 @@
   
   <link rel="stylesheet" href="index.css">
 
-  <title>Schaeffer Georgiou</title>
-
-      <!--#ff1111-->
-      <!--#3f4eff-->
-
-  
+  <title>Schaeffer Georgiou</title>  
 
     
 </head>
 <body>
 
+    <div class="div-black" style="position:sticky; top:0%; width: 10vw; height: 5vh; border-radius: 0 0 50% 50%; margin-left:auto; margin-right: 0;">
+        <a href="#home-top">Back to Top</a>
+    </div>
+
     <div class="grid-container">
 
-        <div class="full-row div-black" style=" min-height: 0px; padding-bottom: 5%; padding-top: 2%;">
+        <div class="div-black" id="home-top" style=" padding-bottom: 2%; padding-top: 2%;">
 
-            <h1>SCHAEFFER GEORGIOU</h1>
-            <h3 style="font-family: Roboto Thin;">Game Developer | Music Producer | Art...enthusiast?</h3>
-            <h4 style="font-family: Roboto Thin; font-style: italic;">Gameplay & Audio Programmer | SFX, Composition & Production | Stylised Digital Art & 3D Modelling</h4>
+            <h1 style="margin-bottom: 0%;">SCHAEFFER GEORGIOU</h1>
+            <h2 style="font-family: Roboto Thin; margin-top: 0%;">Gameplay & Audio Programmer</h2>
 
-        </div>
-
-
-
-
-
-        <div class="left-column div-black" style="line-height: 1.5; max-height: 640px;">
-
-            <h2>About Me</h2>
-
-            <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
-
-                Hello!  Welcome to my parlour of technical and artistic fenangling of powers barely understood by most of humankind!
-                <br><br>
-                I earned First Class Honours in Computing & Games Development at the University of Plymouth, which I'm particularly proud of since I chose to wrangle Unreal Engine 5 and all it's quirks for my final year project. And continue to wrangle when inspiration strikes me giving me a potential concussion.
-                <br><br>
-                Born and raised in South Africa, and currently based in the UK after studying here. I've always had a love for games and sound, and so I'm cutting a path that lets me explore and create these for the medium I feel has given me so much.
-                <br><br>
-                Having created multiple small games projects throughout university with both Unreal Engine and Unity, I'm using the time I have now to expand on a few of those ideas while digging deeper into Audio Programming.
-                <br><br>
-                In terms of audio, Cubase and Audacity have been my poisons of choice for the better part of 5 years to create sound effects and music, but I've recently started learning Reaper for...vindictive reasons.
-                <br><br>
-                Creating models and sprites is a fun creative release and has the added bonus of being usable in projects I work on! I'm currently using a combination of Blender, GIMP, Krita, and DaVinci Resolve.
-
-            </p>
-
+            <nav style="word-spacing: 2rem;">
+                <a href="#about-me">About Me</a> |
+                <a href="#games">Games</a> |
+                <a href="#contact">Contact</a>
+            </nav>
 
         </div>
 
-        <div class="right-column grid-container div-black" style="max-height: 640px;">
+        <div class="grid-gallery div-black">
 
-            <div class="left-column div-black" style="max-height: 640px; object-fit:cover;">
+            <div class="left-column div-black" style="min-height: auto; max-height: 100vh; object-fit: cover;">
 
                 <img src="images/WithRobot.JPG">
 
             </div>
 
-            <div class="right-column div-black" style="max-height: 640px; object-fit: cover; ">
+            <div class="right-column div-black" style="min-height: auto; max-height: 100vh; object-fit: cover; ">
 
                 <img src="images/sadge program.JPG">
 
             </div>
-            <!--
-            <div class="left-column div-black" style="max-height: 255px; object-fit: cover; ">
-
-                <img src="images/Me Sat.JPG">
-
-            </div>
-
-            <div class="right-column div-black" style="max-height: 255px; object-fit: cover; ">
-
-                <img src="images/PrizeInField.JPG">
-
-            </div>
-                -->
-        </div>
-
-        <div class="full-row spacer">
 
         </div>
 
-        <div class="left-column grid-container div-black" style="max-height: 520px;">
+        <div id="about-me" class="div-blue">
 
-            <div class="left-column div-black" style="max-height: 255px;">
+            <h2>About Me</h2>
 
-                <img src="images/RhythmStrategy v1.gif">
+            <p style="text-align: left; margin-left: 5%; margin-right: 5%;">
+
+                Hello!  Welcome to my parlour of fenangling powers barely understood by most of humankind!
+                <br><br>
+                I'm a C++ programmer whose engine of choice is Unreal Engine, I like to play around with low-level data processing and API's like OpenGL and OpenAL because I like creating more problems for myself.
+                <br><br>
+                I earned First Class Honours in Computing & Games Development at the University of Plymouth. Where I was taught and practised every stage of the software development stack, but found I enjoyed the rendering pipeline most. Despite all the scary math.
+                <br><br>
+                I  have experience working in Unity with C#, app development with Java, creating web pages using HTML and CSS, and creating/working with databases using SQL.
+                <br><br>
+                I'm originally from South Africa, now based in the UK, and I believe my unique perspective offers a fresh approach and tenacity to every project I work on.
+                <br><br>
+                I've always had a love for games and sound, so I thought I'd follow a path that involves both!
+
+            </p>
+
+        </div>
+
+
+        <div class="grid-gallery div-black" style="max-height: 100%;">
+
+
+            <div class="left-column div-black" style="max-height: 50vh;">
+
+                <img src="images/RhythmStrategy v1.gif" style="max-height: 50vh;">
 
             </div>
 
-            <div class="right-column div-black" style="max-height: 255px;">
+            <div class="right-column div-black" style="max-height: 50vh;">
 
                 <img src="images/InnerDemons v1.gif">
 
             </div>
 
-            <div class="left-column div-black" style="max-height: 255px;">
+            <div class="left-column div-black" style="max-height: 50vh;">
 
                 <img src="images/Audio Spikes v1.gif">
 
             </div>
 
-            <div class="right-column div-black" style="max-height: 255px;">
+            <div class="right-column div-black" style="max-height: 50vh;">
 
                 <img src="images/Rogue Poker v1.gif">
 
@@ -119,127 +104,77 @@
 
         </div>
 
-
-
-
-        <div class="right-column div-red">
-
-
-
+        <div id="games" class="div-red">
 
             <h2>G A M E S</h2>
 
-            <h4>Programming | Gameplay | UX </h4>
+            <p style=" text-align: left; margin-left: 5%; margin-right: 5%">
 
-            <p style="text-align: left; margin-left: 5%; margin-right: 5% ">
-
-                Primarily experienced with Unity and Unreal Engine 5. Unreal and it's C++ API being my go-to, although blueprints are amazing at getting the ball rolling.
+                Games are pretty cool. And making them is also pretty cool.
                 <br><br>
 
-                I have an affinity for gameplay and audio programming, and I constantly explore things I have little-to-no experience with but WANT to learn, because knowledge is power-MUAHAHAHAHAAA!!
-                <br><br>
+                So I did that.
 
-                For more in-depth breakdowns of my experiences, projects and definitely not evil plans...
+                <ul style="list-style-position: inside; text-align:left; margin-left: 5%; margin-right: 5%;">
+                    <li>I handled project management through AGILE workflows, standard documentation and diagramming</li>
 
-                <br><br>
+                    <li>Gameplay programming for 2D and 3D games in multiple genres</li>
 
+                    <li>Shader programming and editing 3D objects in real-time</li>
+
+                    <li>Composing, mixing, and producing music and SFX, and the code used to cue and play that audio</li>
+
+                    <li>Modelling, rigging, and texturing low-poly assets</li>
+                </ul>
             </p>
+            <p style="text-align: center; margin-left: 5%; margin-right: 5%;">
 
+                For project breakdowns and post mortems...
+            </p>
             <a href="games.html" target="_blank"><h2>CLICK   HERE</h2></a>
+        </div>
+
+
+        <div class="div-black" id="contact" style="padding-bottom: 2%; max-height:100%; padding-top: 2%;">
+
+            <h2 style="color:white;">Contact Me</h2>
+
+            <br><br>
+
+            <form action="https://formsubmit.co/schaeffergeorgiou@gmail.com" method="POST">
+
+                <div class="div-black" style="float: left; height: 100%; width: 50%">
+                    <label for="fname" style="padding: 5px">Name:</label>
+                    <br><br>
+                    <input class="user-input" type="text" id="fname" name="first-name" required>
+                    <br><br>
+                    <label for="lname" style="padding: 5px">Company:</label>
+                    <br><br>
+                    <input class="user-input" type="text" id="lname" name="last-name" required>
+                    <br><br>
+                    <label for="email-addr" style="padding: 5px">E-mail Address:</label>
+                    <br><br>
+                    <input class="user-input" type="email" id="email-addr" name="email-address" required>
+                </div>
+
+                <div class="div-black" style="float: right; height: 100%; width: 50%">
+
+                    <label for="email-subj" style="padding: 5px">Subject:</label>
+                    <br><br>
+                    <input class="user-input" type="text" id="email-subj" name="_subject" required>
+                    <br><br>
+                    <label for="msg" style="padding: 5px">Message:</label>
+                    <br><br>
+                    <textarea class="user-input" id="msg" , name="message" required></textarea>
+                    <br><br><br>
+
+                    <button class="user-input-button" type="submit" value="Send" style="font-family: Roboto Thin;">Submit</button>
+                </div>
+
+            </form>
 
 
         </div>
-
-        <div class="full-row spacer">
-
-
-        </div>
-
-        <!-- <div class="left-column div-blue" style=" margin:auto;">
-
-
-              <h2>A U D I O</h2>
-              <h4>Music | SFX | VO </h4>
-
-              <p><i>Working on it</i></p>
-
-              <!-- <a href="https://soundcloud.com/stargrave-2" target="_blank"><h2>More on SoundCloud</h2></a>
-        
-    </div>
-
-    <div class="right-column div-black" style=" margin:auto;">
-
-
-
-
-    </div>
-
-    <div class="left-column grid-container">
-
-
-
-
-    </div>
-
-    <div class="full-row spacer">
-
-    </div>
-
-
-    <div class="right-column div-red">
-
-
-        <h2>A R T</h2>
-        <h4>Digital | 3D | Concept | Design</h4>
-
-
-        <p><i>Working on it</i></p>
-
-
-
-    </div>-->
-
-    <div class="full-row" style="margin:auto; width:100%; padding-bottom: 5%; padding-top: 5%;">
-
-
-        <h2 style="color:white;">Contact Me</h2>
-
-        <br><br>
-
-        <form action="https://formsubmit.co/schaeffergeorgiou@gmail.com" method="POST">
-
-            <div class="div-black" style="float: left; margin:auto; height: 260px; width: 50%">
-                <label for="fname" style="padding: 5px">Name:</label>
-                <br><br>
-                <input class="user-input" type="text" id="fname" name="first-name" required>
-                <br><br>
-                <label for="lname" style="padding: 5px">Company:</label>
-                <br><br>
-                <input class="user-input" type="text" id="lname" name="last-name" required>
-                <br><br>
-                <label for="email-addr" style="padding: 5px">E-mail Address:</label>
-                <br><br>
-                <input class="user-input" type="email" id="email-addr" name="email-address" required>
-            </div>
-
-            <div class="div-black" style="float: right; margin: auto; height: 260px; width: 50%">
-
-                <label for="email-subj" style="padding: 5px">Subject:</label>
-                <br><br>
-                <input class="user-input" type="text" id="email-subj" name="_subject" required>
-                <br><br>
-                <label for="msg" style="padding: 5px">Message:</label>
-                <br><br>
-                <textarea class="user-input" id="msg" , name="message" required></textarea>
-                <br><br><br>
-
-                <button class="user-input-button" type="submit" value="Send" style="font-family: Roboto Thin;">Submit</button>
-            </div>
-
-        </form>
-
-
-    </div>
 
 
     </div>
