@@ -132,6 +132,7 @@
                     <br>
                     I saw this as an amazing opportunity to learn more about binary file reading and audio programming!
                     So I created a simple reader for <abbr title="Resource Interchange File Format">RIFF</abbr> WAVE files which outputs PCM data, and all that's left on the data side is to revert that to sample data to be assigned to vertices.
+                    <br>
                     The data reading took a while, because I was having to figure all of this out myself. It can currently only read RIFF wave files, since I haven't accounted for different header contents.
                     The endianness in the header is what confused me the most, as it changes in certain lines. So implementing a way to correctly interpret and test for correct reading was a doozy and taught me about bitwise operations, which I had never used before.
                     <br><br>
